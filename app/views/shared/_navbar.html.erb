@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light">
   <div class="container">
-  <%= link_to 'Community', root_path, class: "navbar-brand" %>
+  <%= link_to 'Community', user_signed_in? ? authenticated_root_path : unauthenticated_root_path, class: "navbar-brand" %>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

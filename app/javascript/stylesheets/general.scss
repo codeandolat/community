@@ -1,0 +1,29 @@
+.navbar-brand {
+  font-family: 'Lobster', 'Helvetica', cursive;
+  font-size: 1.75rem;
+}
+
+.hero {
+  background-image: url('../images/background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: 100vh;
+  min-height: 500px;
+  position: relative;
+
+  .hero-content {
+    font-family: 'Lobster', 'Helvetica', cursive;
+    z-index: 2;
+  }
+
+  .transparency {
+    background: rgba(0,0,0,0.7);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

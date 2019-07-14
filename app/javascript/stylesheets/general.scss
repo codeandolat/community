@@ -1,6 +1,13 @@
-.navbar-brand {
-  font-family: 'Lobster', 'Helvetica', cursive;
-  font-size: 1.75rem;
+#error_explanation {
+  background-color: $sunglo;
+  border-radius: 5px;
+  color: white;
+  margin-bottom: 10px;
+  padding: 5px;
+
+  ul {
+    margin: 0;
+  }
 }
 
 .hero {
@@ -26,4 +33,9 @@
     right: 0;
     top: 0;
   }
+}
+
+.navbar-brand {
+  font-family: 'Lobster', 'Helvetica', cursive;
+  font-size: 1.75rem;
 }

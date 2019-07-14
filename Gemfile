@@ -28,6 +28,7 @@ gem 'image_processing', '~> 1.2'
 gem 'devise'
 gem 'devise-bootstrapped', github: 'king601/devise-bootstrapped', branch: 'bootstrap4'
 gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
+gem 'haml-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

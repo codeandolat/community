@@ -10,6 +10,16 @@
   }
 }
 
+.alert {
+    bottom: 0;
+    height: 50px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 68px;
+    z-index: 3;
+}
+
 .hero {
   background-image: url('../images/background.jpg');
   background-position: center;

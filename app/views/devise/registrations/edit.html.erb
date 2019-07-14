@@ -5,6 +5,18 @@
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= render partial: 'devise/shared/error_messages', resource: resource %>
 
+      <div class="text-center py-3">
+        <% if current_user.avatar.attached? %>
+          <%= image_tag current_user.avatar, height: 50, width: 50, class: "rounded" %>
+        <% else %>
+          <%= image_tag gravatar_image_url(current_user.email, size: 100), height: 50, width: 50, class: "rounded" %>
+        <% end %>
+      </div>
+
+      <div class="form-group">
+        <%= f.file_field :avatar, class: 'form-control-file' %>
+      </div>
+
       <div class="row">
         <div class="col-lg-6">
           <div class="form-group">

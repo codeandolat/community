@@ -13,6 +13,7 @@ require.context('../images', true)
 
 import 'bootstrap'
 
+import "controllers"
 import '../stylesheets/application'
 
 $(document).on('turbolinks:load', function () {
@@ -26,4 +27,4 @@ $(document).on('turbolinks:load', function () {
 // or the `imagePath` JavaScript helper below.
 //
 // const images = require.context('../images', true)
-// const imagePath = (name) => images(name, true)
+// const imagePath = (name) => images(name, true)∫

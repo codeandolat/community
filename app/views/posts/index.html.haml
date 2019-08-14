@@ -2,13 +2,12 @@
   .row
     .col-lg-8
       - @posts.each do |post|
-        .card
+        .card.mb-3
           .card-body
             %h5.card-title= post.title
             %h6.card-subtitle.mb-2.text-muted.font-weight-light= time_ago_in_words(post.created_at)
-            %p.card-text= post.content
             %a.card-link{:href => "#"} See more
-            %a.card-link{:href => "#"} stars
+            %a.card-link{:href => "#"} Comments
     .col-lg-4
       .card
         .card-header Tags

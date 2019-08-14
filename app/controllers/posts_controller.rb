@@ -23,12 +23,10 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.new(post_params)
 
-    respond_to do |format|
-      if @post.save
-        format.html { redirect_to authenticated_root_path, notice: 'Post was successfully created.' }
-      else
-        format.html { render :new }
-      end
+    if @post.save
+      redirect_to authenticated_root_path, notice: 'Post was successfully created.'
+    else
+      render partial: 'shared/error_messages', locals: {resource: @post}, status: :bad_request
     end
   end
 

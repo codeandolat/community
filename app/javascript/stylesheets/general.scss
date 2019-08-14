@@ -49,3 +49,18 @@
   font-family: 'Lobster', 'Helvetica', cursive;
   font-size: 1.75rem;
 }
+
+.btn {
+  &.btn-not-allowed {
+    cursor: not-allowed;
+  }
+}
+
+.comment-errors {
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+
+  &.show {
+    opacity: 1;
+  }
+}

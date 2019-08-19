@@ -2,12 +2,27 @@
   .row
     .col-lg-8
       - @posts.each do |post|
-        .card.mb-3
+        .card.shadow.mb-3
           .card-body
-            %h5.card-title= post.title
-            %h6.card-subtitle.mb-2.text-muted.font-weight-light= time_ago_in_words(post.created_at)
-            %a.card-link{:href => "#"} See more
-            %a.card-link{:href => "#"} Comments
+            - if current_user.id == post.user_id
+              %p= link_to 'Edit', edit_post_path(post), class: 'float-right'
+            %h5.card-title
+              = link_to post.title, post_path(post)
+            .user.d-flex
+              .mr-2
+                = get_user_avatar(40)
+              .info.d-flex
+                %span.item.font-weight-bold
+                  = current_user.username.capitalize
+                %span.item.font-weight-light.text-muted
+                  = current_user.full_name
+              .created-at
+                %span.font-weight-light.text-muted
+                  = time_ago_in_words(post.created_at) 
+                  ago
+          .card-footer.text-right
+            %a.card-link{:href => "#"}
+              %i.far.fa-comments
     .col-lg-4
       .card
         .card-header Tags

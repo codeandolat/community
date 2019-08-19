@@ -3,5 +3,10 @@
 @import 'actiontext';
 @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts'; 
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+
 @import "colors.scss";
 @import "general.scss";

@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 
   # GET /posts
   def index
-    @posts = Post.last_created
+    @posts = Post.includes(:user).last_created
   end
 
   # GET /posts/:id
@@ -53,6 +53,6 @@ class PostsController < ApplicationController
     end
 
     def set_post
-      @post = current_user.posts.friendly.find(params[:id])
+      @post = Post.friendly.find(params[:id])
     end
 end

@@ -8,4 +8,9 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
 
   validates :username, presence: true, uniqueness: true
+
+  def full_name
+    return "#{first_name} #{last_name}" if first_name && last_name
+    'Bruce Wayne'
+  end
 end
